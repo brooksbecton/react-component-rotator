@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DimitriMikadze/create-react-library.git"
+    "url": "git+https://github.com/brooksbecton/react-component-rotator.git"
   },
   "author": "Brooks Becton <broabect@ut.utm.edu>",
   "bugs": {
-    "url": "https://github.com/DimitriMikadze/create-react-library/issues"
+    "url": "https://github.com/brooksbecton/react-component-rotator/issues"
   },
-  "homepage": "https://github.com/DimitriMikadze/create-react-library#readme",
+  "homepage": "https://github.com/brooksbecton/react-component-rotator#readme",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
