@@ -6,8 +6,8 @@
     "scripts": {
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "predeploy": "npm run demo",
+        "deploy": "gh-pages -d demo",
         "demo": "node scripts/demo.js",
         "lint": "eslint src/",
         "test": "node scripts/test.js --env=jsdom",
@@ -83,12 +83,8 @@
         "react-dom": ">=0.14"
     },
     "jest": {
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,mjs}"
-        ],
-        "setupFiles": [
-            "<rootDir>/config/polyfills.js"
-        ],
+        "collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],
+        "setupFiles": ["<rootDir>/config/polyfills.js"],
         "testMatch": [
             "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
             "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -100,9 +96,7 @@
             "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
             "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
         },
-        "transformIgnorePatterns": [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-        ],
+        "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
         "moduleNameMapper": {
             "^react-native$": "react-native-web"
         },
@@ -117,9 +111,7 @@
         ]
     },
     "babel": {
-        "presets": [
-            "react-app"
-        ]
+        "presets": ["react-app"]
     },
     "eslintConfig": {
         "extends": "react-app"
