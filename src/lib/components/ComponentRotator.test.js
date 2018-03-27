@@ -18,7 +18,7 @@ describe("ComponentRotator", () => {
   it("delays start of child by 'startDelay' prop", () => {
     const mockStartDelay = Math.random();
 
-    const wrapper = shallow(
+    shallow(
       <ComponentRotator
         children={defaultComponents}
         startDelay={mockStartDelay}
@@ -33,7 +33,7 @@ describe("ComponentRotator", () => {
   it("sets interval of child change by 'delay' prop", () => {
     const mockDelay = Math.random();
 
-    const wrapper = shallow(
+    shallow(
       <ComponentRotator children={defaultComponents} delay={mockDelay} />
     );
     expect(setInterval).toHaveBeenLastCalledWith(

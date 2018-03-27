@@ -1,64 +1,57 @@
-# React NPM library starter kit
+# React Component Rotator
 
-[![Build Status](https://travis-ci.org/DimitriMikadze/create-react-library.svg?branch=master)](https://travis-ci.org/DimitriMikadze/create-react-library)
-[![Dependencies](https://img.shields.io/david/DimitriMikadze/create-react-library.svg)]()
-[![Dev Dependencies](https://img.shields.io/david/dev/DimitriMikadze/create-react-library.svg)]()
+## What is it
 
-based on Facebook's <a href="https://github.com/facebookincubator/create-react-app" target="_blank">Create react app</a>.
-We are constantly updating repository with the updates of `create-react-app`, so we have all new features and bug fixes of it.
+React Component Rotator is a React component (_No Way!_) that
+can rotate display of it's children. The children can be homogeneous
+or heterogeneous in their types
 
-## Converted to custom setup
+* JavaScript Basic Types
+* DOM Elements
+* Other React Componenents
+* A mix of all of the above
+* or anything else JSX can display!
 
-Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing: 
+## Why
 
-* React, JSX, ES6, and Flow syntax support.
-* Language extras beyond ES6 like the object spread operator.
-* A dev server that lints for common errors.
-* Import CSS and image files directly from JavaScript.
-* Autoprefixed CSS, so you don’t need `-webkit` or other prefixes.
-* A `build` script to bundle JS, CSS, and images for production.
+It is easy to start getting React to swap out elements useing
+something like setInterval/setTimout, but if you are not careful you
+may be creating the listeners on each render of a component
+React Componenent Rotator takes care of this by cleaning up after
+itself when setting up intervals and timeouts, creating one place to
+handle this set up and tear down logic
 
-## Getting Started
+## Table of Contents
 
-Clone repo
+* [Installation](#installation)
+* [Usage](#usage)
+* [Support](#support)
+* [Contributing](#contributing)
 
-````
-git clone https://github.com/DimitriMikadze/create-react-library.git
-````
+## Installation
 
-Install dependencies
+Add the dependency with npm or yarn
 
-`npm install` or `yarn install`
+```sh
+npm i react-component-rotator
 
-Start development server
+yarn add react-component-rotator
+```
 
-`npm start` or `yarn start`
+## Usage
 
-Runs the demo app in development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+import ComponentRotator from "react-component-rotator";
 
-## Library files
+// ...
 
-All library files are located inside `src/lib`  
+<ComponentRotator children={[<h2>Lie</h2>, <h2>Cheat</h2>, <h2>Steal</h2>]} />;
+```
 
-## Demo app
+## Support
 
-Is located inside `src/demo` directory, here you can test your library while developing
+Please [open an issue](https://github.com/brooksbecton/react-component-rotator/issues/new) for support.
 
-## Testing
+## Contributing
 
-`npm run test` or `yarn run test`
-
-## Build library
-
-`npm run build` or `yarn run build`
-
-Produces production version of library under the `build` folder.
-
-## Publish library
-
-`npm publish`
-
-## Example library built with this starter kit
-
-https://github.com/DimitriMikadze/react-under-construction
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/brooksbecton/react-component-rotator/pulls).
