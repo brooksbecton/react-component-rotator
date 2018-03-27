@@ -43,12 +43,8 @@ class ComponentRotator extends Component {
   }
 
   clearComponentTimers = () => {
-    for (var i = 1; i < 99999; i++) window.clearInterval(i);
-
-    // console.log("clearing");
-    // console.log(this.state.intervalId, this.state.timeoutId);
-    // clearInterval(this.state.intervalId);
-    // clearInterval(this.state.timeoutId);
+    clearInterval(this.state.intervalId);
+    clearInterval(this.state.timeoutId);
   };
 
   incrementIndex = () => {
