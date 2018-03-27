@@ -36,6 +36,7 @@ describe("ComponentRotator", () => {
     shallow(
       <ComponentRotator children={defaultComponents} delay={mockDelay} />
     );
+
     expect(setInterval).toHaveBeenLastCalledWith(
       expect.any(Function),
       mockDelay
@@ -54,6 +55,25 @@ describe("ComponentRotator", () => {
     });
 
     wrapper.unmount();
+
+    expect(clearInterval).toHaveBeenCalledWith(mockIntervalId);
+    expect(clearInterval).toHaveBeenCalledWith(mockTimeoutId);
+  });
+
+  it("clears intervals on prop change", () => {
+    const mockIntervalId = Math.random();
+    const mockTimeoutId = Math.random();
+
+    const wrapper = shallow(<ComponentRotator children={defaultComponents} />);
+
+    const moreComponents = [<h1>RTJ</h1>, ...defaultComponents];
+
+    wrapper.setState({
+      intervalId: mockIntervalId,
+      timeoutId: mockTimeoutId
+    });
+
+    wrapper.setProps({ children: moreComponents });
 
     expect(clearInterval).toHaveBeenCalledWith(mockIntervalId);
     expect(clearInterval).toHaveBeenCalledWith(mockTimeoutId);

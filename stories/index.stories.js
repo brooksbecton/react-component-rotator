@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import ComponentRotator from "./../src/lib/components/ComponentRotator";
 
 const defaultTexts = ["Lie", "Cheat", "Steal"];
-const defaultComponents = [<h2>Lie</h2>, <h2>Cheat</h2>, <h2>Steal</h2>];
+const defaultComponents = [<h1>Lie</h1>, <h2>Cheat</h2>, <h3>Steal</h3>];
 
 storiesOf("ComponentRotator", module)
   .add("default", () => <ComponentRotator children={defaultTexts} />)

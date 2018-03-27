@@ -19,6 +19,7 @@ class ComponentRotator extends Component {
 
   static propTypes = {
     children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.number),
       PropTypes.arrayOf(PropTypes.string),
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
@@ -28,18 +29,20 @@ class ComponentRotator extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    this.clearComponentInterval();
+    if (prevProps !== this.props) {
+      this.clearComponentTimers();
+    }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.startTimer();
   }
 
   componentWillUnmount() {
-    this.clearComponentInterval();
+    this.clearComponentTimers();
   }
 
-  clearComponentInterval = () => {
+  clearComponentTimers = () => {
     clearInterval(this.state.intervalId);
     clearInterval(this.state.timeoutId);
   };
@@ -56,13 +59,12 @@ class ComponentRotator extends Component {
   };
 
   startTimer = () => {
-    this.startInterval();
-
-    const timeoutId = setTimeout(() => {
+    if (this.props.startDelay !== 0) {
+      const timeoutId = setTimeout(this.startInterval, this.props.startDelay);
+      this.setState({ timeoutId });
+    } else {
       this.startInterval();
-    }, this.props.startDelay);
-
-    this.setState({ timeoutId });
+    }
   };
 
   render() {
