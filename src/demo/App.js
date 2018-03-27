@@ -12,7 +12,7 @@ import About from "./pages/About/";
 import Examples from "./pages/Examples/";
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div>
       <CssBaseline />
       <AppBar position="static" color="default">
