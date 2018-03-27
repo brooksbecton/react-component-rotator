@@ -1,5 +1,7 @@
 # React Component Rotator
 
+[![Build Status](https://travis-ci.org/brooksbecton/react-component-rotator.svg?branch=master)](https://travis-ci.org/brooksbecton/react-component-rotator)
+
 ## What is it
 
 React Component Rotator is a React component (_No Way!_) that
