@@ -3,7 +3,7 @@ import Paper from "material-ui/Paper";
 import { MenuItem, MenuList } from "material-ui/Menu";
 import styled from "styled-components";
 
-const RightMenu = () => {
+const SideMenu = () => {
   return (
     <Paper>
       <MenuList>
@@ -25,4 +25,4 @@ const A = styled.a`
   text-decoration: none;
 `;
 
-export default RightMenu;
+export default SideMenu;
