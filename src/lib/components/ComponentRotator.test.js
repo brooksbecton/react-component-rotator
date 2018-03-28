@@ -94,4 +94,11 @@ describe("ComponentRotator", () => {
 
     expect(wrapper.instance().state.activeIndex).toBe(0);
   });
+
+  it("passes classes to the rendered HTML", () => {
+    const testClassName= "byotiful";
+    const wrapper = shallow(<ComponentRotator className={testClassName} children={defaultComponents} />);
+    expect(wrapper.find("span").hasClass(testClassName)).toBeTruthy(); 
+  });
+
 });

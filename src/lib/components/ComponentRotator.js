@@ -68,7 +68,7 @@ class ComponentRotator extends Component {
   };
 
   render() {
-    return <span>{this.props.children[this.state.activeIndex]}</span>;
+    return <span className={this.props.className} >{this.props.children[this.state.activeIndex]}</span>;
   }
 }
 

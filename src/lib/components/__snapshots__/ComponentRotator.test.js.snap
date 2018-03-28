@@ -33,6 +33,7 @@ ShallowWrapper {
       "children": <h2>
         Lie
 </h2>,
+      "className": undefined,
     },
     "ref": null,
     "rendered": Object {
@@ -57,6 +58,7 @@ ShallowWrapper {
         "children": <h2>
           Lie
 </h2>,
+        "className": undefined,
       },
       "ref": null,
       "rendered": Object {
