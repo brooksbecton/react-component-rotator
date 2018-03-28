@@ -22,7 +22,7 @@
     "bugs": {
         "url": "https://github.com/brooksbecton/react-component-rotator/issues"
     },
-    "homepage": "https://brooksbecton.github.io/react-component-rotator/",
+    "homepage": "https://brooksbecton.github.io/react-component-rotator",
     "license": "MIT",
     "dependencies": {
         "gh-pages": "^1.1.0",
